@@ -22,7 +22,7 @@ namespace PhoneApp1
             InitializeComponent();
             
         }
-        
+        string holdAddress = "";
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
@@ -30,7 +30,7 @@ namespace PhoneApp1
 
         private void ContentPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            string holdAddress = "";
+            
             if (NavigationContext.QueryString.TryGetValue("holdAddress", out holdAddress))
             {
                 //set up a url which contains a path to google maps with a search for the address of the searched place

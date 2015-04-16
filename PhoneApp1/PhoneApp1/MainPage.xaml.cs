@@ -28,5 +28,10 @@ namespace PhoneApp1
             NavigationService.Navigate(new Uri("/Search.xaml", UriKind.Relative));
         }
 
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Geolocate.xaml", UriKind.Relative));
+        }
+
     }
 }

@@ -37,3 +37,4 @@ C:\Users\shane\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.g.resources
 C:\Users\shane\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.dll
 C:\Users\shane\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.pdb
 C:\Users\shane\Desktop\PhoneApp1\PhoneApp1\obj\Debug\XapCacheFile.xml
+C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\Geolocate.g.i.cs
