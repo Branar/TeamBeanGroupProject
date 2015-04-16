@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+//Team Bean
+//Windows Phone Application: Lincoln Points Of Interest
 
 namespace PhoneApp1
 {
@@ -31,7 +33,9 @@ namespace PhoneApp1
             string holdAddress = "";
             if (NavigationContext.QueryString.TryGetValue("holdAddress", out holdAddress))
             {
+                //set up a url which contains a path to google maps with a search for the address of the searched place
                 Uri holdAdUri = new Uri("https://www.google.co.uk/maps/place/" + holdAddress, UriKind.Absolute);
+                //sets the uri to the value of the web source of the browser window
                 webBrowser1.Source = holdAdUri;
             }
         }

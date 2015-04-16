@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+//Team Bean
+//Windows Phone Application: Lincoln Points Of Interest
 
 namespace PhoneApp1
 {
