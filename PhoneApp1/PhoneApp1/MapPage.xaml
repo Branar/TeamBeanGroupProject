@@ -27,7 +27,7 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
             <phone:WebBrowser DataContext="{Binding}" Height="420" HorizontalAlignment="Left" IsGeolocationEnabled="True" IsScriptEnabled="True" Margin="6,29,0,0" Name="webBrowser1" Source="https://www.google.co.uk/maps/@53.2182958,-0.5554965,13z" VerticalAlignment="Top" Width="444" />
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="150,509,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
         </Grid>

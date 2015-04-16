@@ -23,19 +23,19 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="Team Bean" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="86" />
+            <TextBlock x:Name="PageTitle" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="86" FontSize="65" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="158,504,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Button Content="Show on Map" Height="72" HorizontalAlignment="Left" Margin="96,445,0,0" Name="button2" VerticalAlignment="Top" Width="287" Click="button2_Click" />
-            <TextBlock Height="154" HorizontalAlignment="Left" Margin="29,10,0,0" Name="textBlock1" Text="" VerticalAlignment="Top" Width="406" />
-            <TextBlock Height="65" HorizontalAlignment="Left" Margin="29,170,0,0" Name="textBlock2" Text="" VerticalAlignment="Top" Width="406" />
-            <TextBlock Height="68" HorizontalAlignment="Left" Margin="29,241,0,0" Name="textBlock3" Text="" VerticalAlignment="Top" Width="406" />
-            <TextBlock Height="52" Margin="29,0,0,252" Name="textBlock4" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" />
-            <TextBlock Height="52" HorizontalAlignment="Right" Margin="0,313,21,0" Name="textBlock5" Text="" VerticalAlignment="Top" Width="197" />
-            <TextBlock Height="68" HorizontalAlignment="Left" Margin="29,371,0,0" Name="textBlock6" Text="" VerticalAlignment="Top" Width="406" />
+            <TextBlock Height="125" HorizontalAlignment="Left" Margin="29,10,0,0" Name="textBlock1" Text="" VerticalAlignment="Top" Width="406" FontSize="22" />
+            <TextBlock Height="65" HorizontalAlignment="Left" Margin="29,141,0,0" Name="textBlock2" Text="" VerticalAlignment="Top" Width="406" FontSize="25" />
+            <TextBlock Height="68" HorizontalAlignment="Left" Margin="29,212,0,0" Name="textBlock3" Text="" VerticalAlignment="Top" Width="406" FontSize="22" />
+            <TextBlock Height="52" Margin="29,0,0,279" Name="textBlock4" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" />
+            <TextBlock Height="52" HorizontalAlignment="Right" Margin="0,286,21,0" Name="textBlock5" Text="" VerticalAlignment="Top" Width="197" />
+            <TextBlock Height="68" HorizontalAlignment="Left" Margin="29,344,0,0" Name="textBlock6" Text="" VerticalAlignment="Top" Width="406" FontSize="25" />
         </Grid>
     </Grid>
  

@@ -18,11 +18,22 @@ namespace PhoneApp1
         public MapPage()
         {
             InitializeComponent();
+            
         }
-
+        
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void ContentPanel_Loaded(object sender, RoutedEventArgs e)
+        {
+            string holdAddress = "";
+            if (NavigationContext.QueryString.TryGetValue("holdAddress", out holdAddress))
+            {
+                Uri holdAdUri = new Uri("https://www.google.co.uk/maps/place/" + holdAddress, UriKind.Absolute);
+                webBrowser1.Source = holdAdUri;
+            }
         }
     }
 }
