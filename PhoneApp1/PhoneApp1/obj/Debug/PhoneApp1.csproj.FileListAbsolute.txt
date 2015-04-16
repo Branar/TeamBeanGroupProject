@@ -16,3 +16,5 @@ C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.g.resourc
 C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.dll
 C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.pdb
 C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\XapCacheFile.xml
+C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\InformationPage.g.i.cs
+C:\Users\Administrator\Desktop\PhoneApp1\PhoneApp1\obj\Debug\MapPage.g.i.cs
