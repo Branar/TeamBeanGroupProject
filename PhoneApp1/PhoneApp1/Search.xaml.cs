@@ -45,9 +45,6 @@ namespace PhoneApp1
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
                 category = "Historical";
-                Uri holdValues = new Uri("/PhoneApp1;component/InformationPage.xaml?address=" + address + "&locationName=" + locationName + 
-                    "&phoneNum=" + phoneNum + "&email=" + email + "&openingTime=" + openingTime + "&closingTime=" + closingTime + "&category=" + category);
-                hyperlinkButton1.NavigateUri = holdValues;
             }
             else if (inputString == "lincoln cathedral")
             {
@@ -364,6 +361,7 @@ namespace PhoneApp1
             {
                 feedbackBox.Text = "Please check the name and spelling of your location!";
             }
+            NavigationService.Navigate(new Uri("/PhoneApp1;component/InformationPage.xaml?" + "address=" + address + "&locationName=" + locationName + "&phoneNum=" + phoneNum + "&email=" + email + "&openingTime=" + openingTime + "&closingTime=" + closingTime + "&category=" + category, UriKind.Relative));
         }
 
     }
