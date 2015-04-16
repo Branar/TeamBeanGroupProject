@@ -15,7 +15,7 @@ namespace PhoneApp1
 {
     public partial class Search : PhoneApplicationPage
     {
-        public string address = "",locationName = "", phoneNum = "", email= "", openingTime = "", closingTime = "", catagory = "";
+        public string address = "",locationName = "", phoneNum = "", email= "", openingTime = "", closingTime = "", category = "";
         public Search()
         {
             InitializeComponent();
@@ -26,36 +26,40 @@ namespace PhoneApp1
             NavigationService.GoBack();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void hyperlinkButton1_Click(object sender, RoutedEventArgs e)
         {
             string inputString = textBox1.Text;
             inputString = inputString.ToLower(); //converts the text input into the textbox into lower case letters 
-            
+
             if (inputString == "") //checks if the text box is empty and returns a message in the textblock.
             {
                 feedbackBox.Text = "You must enter a location in order to search!";
             }
             if (inputString == "lincoln castle")
             {
+                
                 locationName = "Lincoln Castle";
                 address = "Castle Hill, Lincoln, LN1 3AA";
                 phoneNum = "01522 782040";
                 email = "groups-lincolncastle@lincolnshire.gov.uk";
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
-                catagory = "Historical";
+                category = "Historical";
+                Uri holdValues = new Uri("/PhoneApp1;component/InformationPage.xaml?address=" + address + "&locationName=" + locationName + 
+                    "&phoneNum=" + phoneNum + "&email=" + email + "&openingTime=" + openingTime + "&closingTime=" + closingTime + "&category=" + category);
+                hyperlinkButton1.NavigateUri = holdValues;
             }
-            if (inputString == "lincoln cathedral")
+            else if (inputString == "lincoln cathedral")
             {
                 locationName = "Lincoln Cathedral";
                 address = "Minster Yard, Lincoln, LN2 1PX";
                 phoneNum = "01522 561600";
                 email = "visitors@lincolncathedral.com";
-                openingTime = "7:15am"; 
+                openingTime = "7:15am";
                 closingTime = "6:00pm";
-                catagory = "Historical";
+                category = "Historical";
             }
-            if (inputString == "arboretum")
+            else if (inputString == "arboretum")
             {
                 locationName = "Arboretum";
                 address = "City Hall, Beaumont Fee Lincoln, LN1 1DD";
@@ -63,9 +67,9 @@ namespace PhoneApp1
                 email = "urbanrangers@lincoln.gov.uk";
                 openingTime = "7:00am";
                 closingTime = "10:00pm";
-                catagory = "Park";
+                category = "Park";
             }
-            if (inputString == "newport arch")
+            else if (inputString == "newport arch")
             {
                 locationName = "Newport Arch";
                 address = "50 Bailgate, Lincoln, LN1 3AP";
@@ -73,9 +77,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "24 hours";
                 closingTime = "";
-                catagory = "Historical";
+                category = "Historical";
             }
-            if (inputString == "the collection")
+            else if (inputString == "the collection")
             {
                 locationName = "The Collection";
                 address = "Carholme Road, Lincoln, LN1 1SE";
@@ -83,9 +87,9 @@ namespace PhoneApp1
                 email = "thecollection@lincolnshire.gov.uk";
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
-                catagory = "Museum";
+                category = "Museum";
             }
-            if (inputString == "lincoln racecourse")
+            else if (inputString == "lincoln racecourse")
             {
                 locationName = "Lincoln Racecourse";
                 address = "Danes Terrace, Lincoln, LN2 1LP";
@@ -93,9 +97,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if ((inputString == "lincoln city f.c") || (inputString == "lincoln city fc"))
+            else if ((inputString == "lincoln city f.c") || (inputString == "lincoln city fc"))
             {
                 locationName = "Lincoln City F.C";
                 address = "Ashby Avenue, Lincoln, LN6 0DY";
@@ -103,9 +107,9 @@ namespace PhoneApp1
                 email = "LCFC@lincolncityfootballclub.com";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if (inputString == "museum of lincolnshire life")
+            else if (inputString == "museum of lincolnshire life")
             {
                 locationName = "Museum of Lincolnshire Life";
                 address = "Old Barracks, Burton Road, Lincoln, LN1 3LY";
@@ -113,10 +117,10 @@ namespace PhoneApp1
                 email = "lincolnshirelife_museum@lincolnshire.gov.uk";
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
-                catagory = "Museum";
+                category = "Museum";
             }
 
-            if (inputString == "jews house")
+            else if (inputString == "jews house")
             {
                 locationName = "Jews House";
                 address = "15 The Strait, Lincoln, LN2 1JD";
@@ -124,9 +128,9 @@ namespace PhoneApp1
                 email = "info@jewshouserestaurant.co.uk";
                 openingTime = "7.00am";
                 closingTime = "9:30pm";
-                catagory = "Restaurant, Historical";
+                category = "Restaurant, Historical";
             }
-            if ((inputString == "waterside") || (inputString == "waterside shopping centre"))
+            else if ((inputString == "waterside") || (inputString == "waterside shopping centre"))
             {
                 locationName = "Waterside Shopping centre";
                 address = "High Street, Lincoln, LN2 2PG";
@@ -134,9 +138,9 @@ namespace PhoneApp1
                 email = "info@watersideshopping.com";
                 openingTime = "9:00am";
                 closingTime = "5:30pm";
-                catagory = "Shopping";
+                category = "Shopping";
             }
-            if (inputString == "st marks shopping center")
+            else if (inputString == "st marks shopping center")
             {
                 locationName = "St Marks Shopping Center";
                 address = "Management Suite, 1 Saint Marks Square, Lincoln, LN5 7EX";
@@ -144,9 +148,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "9:00am";
                 closingTime = "5:30pm";
-                catagory = "Shopping";
+                category = "Shopping";
             }
-            if (inputString == "theatre royal")
+            else if (inputString == "theatre royal")
             {
                 locationName = "Theatre Royal";
                 address = "Clasketgate, Lincoln, LN2 1JJ";
@@ -154,9 +158,9 @@ namespace PhoneApp1
                 email = "boxoffice@lincolntheatreroyal.com";
                 openingTime = "10:00am";
                 closingTime = "6:00pm";
-                catagory = "Theatre";
+                category = "Theatre";
             }
-            if (inputString == "drill hall")
+            else if (inputString == "drill hall")
             {
                 locationName = "Drill Hall";
                 address = "Free School Lane, Lincoln, LN2 1EY";
@@ -164,9 +168,9 @@ namespace PhoneApp1
                 email = "boxoffice@lincolndrillhall.com";
                 openingTime = "9:00am";
                 closingTime = "5:00pm";
-                catagory = "Theatre";
+                category = "Theatre";
             }
-            if (inputString == "engine shed")
+            else if (inputString == "engine shed")
             {
                 locationName = "Engine Shed";
                 address = "University of Lincoln, Brayford Pool, Lincoln, LN6 7TS";
@@ -174,9 +178,9 @@ namespace PhoneApp1
                 email = "hellothere@engineshed.co.uk";
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
-                catagory = "Music, Entertainment";
+                category = "Music, Entertainment";
             }
-            if ((inputString == "university of lincoln") || (inputString == "uol"))
+            else if ((inputString == "university of lincoln") || (inputString == "uol"))
             {
                 locationName = "University of Lincoln";
                 address = "University of Lincoln, Brayford Pool, Lincoln, LN6 7TS";
@@ -184,9 +188,9 @@ namespace PhoneApp1
                 email = "helpdesk@lincoln.ac.uk";
                 openingTime = "9:00am";
                 closingTime = "5:00pm";
-                catagory = "Education";
+                category = "Education";
             }
-            if (inputString == "lincoln college")
+            else if (inputString == "lincoln college")
             {
                 locationName = "Lincoln College";
                 address = "Monks Road, Lincoln, LN2 5HQ";
@@ -194,9 +198,9 @@ namespace PhoneApp1
                 email = "enquiries@lincolncollege.ac.uk";
                 openingTime = "9:00am";
                 closingTime = "5:00pm";
-                catagory = "Education";
+                category = "Education";
             }
-            if ((inputString == "bishop grosseteste university") || (inputString == "bgu"))
+            else if ((inputString == "bishop grosseteste university") || (inputString == "bgu"))
             {
                 locationName = "Bishop Grosseteste University";
                 address = "Longdales Road, Lincoln, LN1 3DY";
@@ -204,9 +208,9 @@ namespace PhoneApp1
                 email = "reception@bishopg.ac.uk";
                 openingTime = "9:00am";
                 closingTime = "5:00pm";
-                catagory = "Education";
+                category = "Education";
             }
-            if (inputString == "hartsholme park")
+            else if (inputString == "hartsholme park")
             {
                 locationName = "Hartsholme Park";
                 address = "Skellingthorpe Road, Lincoln, LN6 0EY";
@@ -214,9 +218,9 @@ namespace PhoneApp1
                 email = "customer.services@lincoln.gov.uk";
                 openingTime = "24 hours";
                 closingTime = "";
-                catagory = "Parks";
+                category = "Parks";
             }
-            if (inputString == "boultham park")
+            else if (inputString == "boultham park")
             {
                 locationName = "Boultham Park";
                 address = "Boultham Park, Lincoln";
@@ -224,9 +228,9 @@ namespace PhoneApp1
                 email = "chelsey.barnes@linkage.org.uk";
                 openingTime = "24 hours";
                 closingTime = "";
-                catagory = "Park, Historical";
+                category = "Park, Historical";
             }
-            if (inputString == "west common")
+            else if (inputString == "west common")
             {
                 locationName = "West Common";
                 address = "West Common, Lincoln";
@@ -234,9 +238,9 @@ namespace PhoneApp1
                 email = "customer.services@lincoln.gov.uk";
                 openingTime = "24 hours";
                 closingTime = "";
-                catagory = "Park";
+                category = "Park";
             }
-            if (inputString == "south common")
+            else if (inputString == "south common")
             {
                 locationName = "South Common";
                 address = "South Common, Lincoln";
@@ -244,9 +248,9 @@ namespace PhoneApp1
                 email = "customer.services@lincoln.gov.uk";
                 openingTime = "24 hours";
                 closingTime = "";
-                catagory = "Parks";
+                category = "Parks";
             }
-            if (inputString == "canwick park golf club")
+            else if (inputString == "canwick park golf club")
             {
                 locationName = "Canwick Park Golf Club";
                 address = "Washingborough Road, Lincoln, LN4 1EF";
@@ -254,9 +258,9 @@ namespace PhoneApp1
                 email = "manager@canwickpark.co.uk";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if (inputString == "carholme golf club")
+            else if (inputString == "carholme golf club")
             {
                 locationName = "Carlholme Golf Club";
                 address = "Carholme Road, Lincoln, LN1 1SE";
@@ -264,9 +268,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if (inputString == "brayford boat trips")
+            else if (inputString == "brayford boat trips")
             {
                 locationName = "Brayford Boat Trips";
                 address = "Brayford Wharf North, Lincoln, LN1 1YT";
@@ -274,9 +278,9 @@ namespace PhoneApp1
                 email = "paul@lincolnboattrips.com";
                 openingTime = "11:00am";
                 closingTime = "3:45pm";
-                catagory = "Tour";
+                category = "Tour";
             }
-            if (inputString == "tour bus")
+            else if (inputString == "tour bus")
             {
                 locationName = "Tour Bus";
                 address = "Minster Yard, Lincoln, LN2 1PX";
@@ -284,9 +288,9 @@ namespace PhoneApp1
                 email = "visitorinformation@lincolnbig.co.uk";
                 openingTime = "10:00am";
                 closingTime = "3:00pm";
-                catagory = "Tour";
+                category = "Tour";
             }
-            if (inputString == "calder farm stables")
+            else if (inputString == "calder farm stables")
             {
                 locationName = "Calder Farm Stables";
                 address = "Calder Rd, Lincoln, LN5 9BB";
@@ -294,9 +298,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "9:00pm";
                 closingTime = "4:00pm";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if (inputString == "david lloyd")
+            else if (inputString == "david lloyd")
             {
                 locationName = "David Lloyd";
                 address = "Burton Waters, Lincoln, LN1 2BE";
@@ -304,9 +308,9 @@ namespace PhoneApp1
                 email = "";
                 openingTime = "6:30am";
                 closingTime = "11:00pm";
-                catagory = "Gym";
+                category = "Gym";
             }
-            if (inputString == "doddington hall")
+            else if (inputString == "doddington hall")
             {
                 locationName = "Doddington Hall";
                 address = "Doddington, Lincolnshire, LN6 4RU";
@@ -314,9 +318,9 @@ namespace PhoneApp1
                 email = "info@doddingtonhall.com";
                 openingTime = "11:00am";
                 closingTime = "4:00pm";
-                catagory = "Historical";
+                category = "Historical";
             }
-            if (inputString == "essential ayurveda retreats")
+            else if (inputString == "essential ayurveda retreats")
             {
                 locationName = "Essential Ayurveda Retreats";
                 address = "The Old Plough, 10 - 12 Fen Road, Lincolnshire, PE23 5PF";
@@ -324,9 +328,9 @@ namespace PhoneApp1
                 email = "info@essentialayurveda.co.uk";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Spa";
+                category = "Spa";
             }
-            if (inputString == "gridline racing")
+            else if (inputString == "gridline racing")
             {
                 locationName = "Gridline Racing";
                 address = "Dunford Road, Lincoln, LN5 8HF";
@@ -334,9 +338,9 @@ namespace PhoneApp1
                 email = "info@gridlineracing.com";
                 openingTime = "";
                 closingTime = "";
-                catagory = "Sport";
+                category = "Sport";
             }
-            if (inputString == "lincoln guided tours")
+            else if (inputString == "lincoln guided tours")
             {
                 locationName = "Lincoln Guided Tours";
                 address = "Address changes dependant on tour location";
@@ -344,9 +348,9 @@ namespace PhoneApp1
                 email = "brian@lincolnguidedtours.co.uk";
                 openingTime = "11:00am";
                 closingTime = "5:30pm";
-                catagory = "Tour";
+                category = "Tour";
             }
-            if (inputString == "jews court")
+            else if (inputString == "jews court")
             {
                 locationName = "Jews Court";
                 address = "Steep Hill, Lincoln, LN2 1LS";
@@ -354,17 +358,14 @@ namespace PhoneApp1
                 email = "info@slha.org.uk";
                 openingTime = "10:00am";
                 closingTime = "4:00pm";
-                catagory = "Historical";
+                category = "Historical";
             }
             else //this statement is called to display information in the textblock if the input text cant be matched to a statement
             {
                 feedbackBox.Text = "Please check the name and spelling of your location!";
             }
-
-
-
-
         }
 
     }
 }
+//PhoneApp1;component/InformationPage.xaml?address=address&locationName=locationName&phoneNum=phoneNum&email=email&openingTime=openingTime&closingTime=closingTime&category=category
